@@ -1,0 +1,147 @@
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  color: #009688; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.typed-fade-out {
+  opacity: 0;
+  animation: 0;
+  transition: opacity .25s; }
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden; }
+
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0; }
+
+h1, h2, h3, p, a {
+  font-family: "Helvetica Neue", sans-serif !important; }
+
+.ui.top.fixed.menu {
+  height: 58px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: none; }
+  .ui.top.fixed.menu .brand.item {
+    padding-left: 0; }
+    .ui.top.fixed.menu .brand.item .nav-logo {
+      width: 100px; }
+  .ui.top.fixed.menu .nav-logo {
+    height: 50px; }
+
+.top-content {
+  padding-top: 58px;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0; }
+  .top-content .pg-canvas {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin-top: -60px; }
+  .top-content .top-content-grid {
+    z-index: 3;
+    position: relative; }
+    .top-content .top-content-grid h1.title {
+      font-size: 38px;
+      font-weight: normal;
+      letter-spacing: -1px;
+      color: #263238; }
+    .top-content .top-content-grid .intro-column {
+      display: table; }
+      .top-content .top-content-grid .intro-column .intro-column-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        height: 300px; }
+
+.analytics-content {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #FAFAFA;
+  padding: 10px 0; }
+
+.now-content {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .now-content .api-intro {
+    background: #E0F2F1;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    font-weight: bold;
+    color: #009688;
+    text-align: center; }
+  .now-content .now-content-grid .rank-list-wrapper {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px; }
+    .now-content .now-content-grid .rank-list-wrapper .logo {
+      display: block;
+      height: 20px;
+      margin: auto; }
+    .now-content .now-content-grid .rank-list-wrapper .list-title {
+      margin-top: 10px;
+      text-align: center; }
+    .now-content .now-content-grid .rank-list-wrapper .rank-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0 !important; }
+      .now-content .now-content-grid .rank-list-wrapper .rank-list li article.rank-item {
+        border-top: 1px solid #e0e0e0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer; }
+        .now-content .now-content-grid .rank-list-wrapper .rank-list li article.rank-item:hover {
+          background-color: #fafafa; }
+        .now-content .now-content-grid .rank-list-wrapper .rank-list li article.rank-item .rank {
+          vertical-align: bottom;
+          margin-right: 5px; }
+          .now-content .now-content-grid .rank-list-wrapper .rank-list li article.rank-item .rank .ui.circular.label {
+            background-color: #ECEFF1 !important; }
+        .now-content .now-content-grid .rank-list-wrapper .rank-list li article.rank-item .title {
+          color: #263238 !important;
+          vertical-align: bottom;
+          font-size: 12px;
+          font-weight: bold; }
+          .now-content .now-content-grid .rank-list-wrapper .rank-list li article.rank-item .title span {
+            margin-top: 3px;
+            max-width: 40%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            position: absolute; }
+        .now-content .now-content-grid .rank-list-wrapper .rank-list li article.rank-item .status {
+          vertical-align: bottom;
+          float: right; }
+
+/*# sourceMappingURL=master.css.map */
