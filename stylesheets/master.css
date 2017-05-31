@@ -61,14 +61,13 @@ h1, h2, h3, p, a {
     height: 50px; }
 
 .top-content {
-  padding-top: 58px;
+  height: 100vh;
   background: #fafafa;
   border-bottom: 1px solid #e0e0e0; }
   .top-content .pg-canvas {
     display: block;
     position: absolute;
-    z-index: 1;
-    margin-top: -60px; }
+    z-index: 1; }
   .top-content .top-content-grid {
     z-index: 3;
     position: relative; }
@@ -78,21 +77,46 @@ h1, h2, h3, p, a {
       letter-spacing: -1px;
       color: #263238; }
     .top-content .top-content-grid .intro-column {
-      display: table; }
+      display: table !important; }
       .top-content .top-content-grid .intro-column .intro-column-wrapper {
         display: table-cell;
         vertical-align: middle;
-        height: 300px; }
+        height: 100vh; }
+    .top-content .top-content-grid .chart-column {
+      display: table !important; }
+      .top-content .top-content-grid .chart-column .chart-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100vh; }
 
 .analytics-content {
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   background-color: #FAFAFA;
-  padding: 10px 0; }
+  padding: 10px 0;
+  height: 100vh; }
 
 .now-content {
+  height: 100vh;
   padding-top: 20px;
   padding-bottom: 20px; }
+  .now-content .content-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%; }
+    .now-content .content-wrapper .content {
+      display: table-cell;
+      vertical-align: middle; }
+  .now-content .intro-title {
+    text-align: center;
+    margin-bottom: 20px; }
+    .now-content .intro-title .title {
+      font-size: 24px;
+      letter-spacing: -1px;
+      font-weight: 200;
+      color: #263238; }
+    .now-content .intro-title .summary {
+      color: #607D8B; }
   .now-content .api-intro {
     background: #E0F2F1;
     margin-top: -20px;
