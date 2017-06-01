@@ -27,6 +27,7 @@ export default class SectionRank extends Vue {
 
                 this.rankResult = rankResponse.data;
                 this.isDataLoaded = true;
+
                 break;
         }
     }

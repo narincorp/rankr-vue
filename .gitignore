@@ -202,3 +202,5 @@ jspm_packages
 
 ### Git ###
 *.orig
+
+libs
