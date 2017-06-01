@@ -1,5 +1,7 @@
-class Rank {
-    // static getAllRank(then) {
-    //     return this.$http.get()
-    // }
+import {RankStatus} from "./rank-status";
+export interface Rank {
+    rank: number;
+    value?: number;
+    title: string;
+    status?: RankStatus;
 }
