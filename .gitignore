@@ -204,3 +204,4 @@ jspm_packages
 *.orig
 
 libs
+stylesheets/*.css
