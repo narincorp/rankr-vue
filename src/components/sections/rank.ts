@@ -12,6 +12,10 @@ export default class SectionRank extends Vue {
     isDataLoaded: boolean = false;
 
     async created() {
+       this.updateRankData();
+    }
+
+    async updateRankData(){
         let rankResponse = await axios.get(`http://localhost:3000/rank/all`);
 
         switch (rankResponse.status) {

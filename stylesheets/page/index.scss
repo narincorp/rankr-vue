@@ -73,7 +73,6 @@ h1, h2, h3, p, a {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: none;
   .brand.item {
-    padding-left: 0;
     .nav-logo {
       width: 100px;
     }
@@ -84,13 +83,15 @@ h1, h2, h3, p, a {
 }
 
 .top-content {
-  height: 100vh;
+  //height: 100vh;
   background: #fafafa;
+  padding-top: 58px;
   border-bottom: 1px solid #e0e0e0;
   .pg-canvas {
     display: block;
     position: absolute;
     z-index: 1;
+    margin-top: -58px;
   }
   .top-content-grid {
     z-index: 3;
@@ -106,7 +107,7 @@ h1, h2, h3, p, a {
       .intro-column-wrapper {
         display: table-cell;
         vertical-align: middle;
-        height: 100vh;
+        height: 400px;
       }
     }
     .chart-column {
@@ -114,7 +115,7 @@ h1, h2, h3, p, a {
       .chart-wrapper {
         display: table-cell;
         vertical-align: middle;
-        height: 100vh;
+        //height: 100vh;
       }
     }
     .chart-wrapper {
@@ -129,7 +130,7 @@ h1, h2, h3, p, a {
   border-bottom: 1px solid #e0e0e0;
   background-color: #FAFAFA;
   padding: 10px 0;
-  height:100vh;
+  //height:100vh;
   //display: table;
   //width: 100%;
   .chart-content-wrapper{
@@ -142,7 +143,9 @@ h1, h2, h3, p, a {
 }
 
 .now-content {
-  height: 100vh;
+  //height: 100vh;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
   .content-wrapper {
     display: table;
     width: 100%;
@@ -156,13 +159,18 @@ h1, h2, h3, p, a {
     text-align: center;
     margin-bottom: 20px;
     .title {
-      font-size: 24px;
+      font-size: 48px;
       letter-spacing: -1px;
       font-weight: 200;
       color: #263238;
     }
     .summary {
       color: #607D8B;
+      .basic.button{
+        padding :5px 10px !important;
+        color: #263238 !important;
+        border-radius: 1px;
+      }
     }
   }
   .api-intro {

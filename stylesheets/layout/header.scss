@@ -1,0 +1,20 @@
+
+.ui.top.fixed.menu {
+  height: 58px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: none;
+  .right.item {
+    padding: 0;
+    & .item {
+      height: 100%;
+    }
+  }
+  .brand.item {
+    .nav-logo {
+      width: 100px;
+    }
+  }
+  .nav-logo {
+    height: 50px;
+  }
+}

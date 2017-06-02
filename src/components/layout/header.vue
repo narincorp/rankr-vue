@@ -1,6 +1,6 @@
 <template lang="pug">
     header
-        nav.ui.top.fixed.menu.borderless
+        nav.ui.top.fixed.menu
             .ui.container
                 .brand.item
                     img.nav-logo(src='images/nav-logo.svg')

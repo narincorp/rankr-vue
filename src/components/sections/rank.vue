@@ -7,7 +7,14 @@
             <div class="content">
                 <div class="intro-title">
                     <h1 class="title">실시간 통합 인기검색어</h1>
-                    <p class="summary"><b>총 4개의 포털사이트에서 실시간 인기검색어를 크롤합니다.</b><br>최근 1분전 업데이트 됨</p>
+                    <p class="summary"><b>총 4개의 포털사이트에서 상시로 실시간 인기검색어를 크롤합니다.</b>
+                        <br>
+                        최근 1분전 업데이트 됨
+                        <button class="ui basic small button" v-on:click="updateRankData()">
+                            <i class="icon refresh"></i>
+                            새로고침
+                        </button>
+                    </p>
                 </div>
                 <div class="ui stackable four column grid container now-content-grid">
                     <div class="column ranking-column naver">

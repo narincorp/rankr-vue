@@ -82,10 +82,16 @@ export default class SectionAnalytics extends Vue {
                             ticks: {
                                 reverse: true,
                                 beginAtZero: true
-                            }
+                            },
+                            gridLines: {
+                                display: true
+                            },
                         }],
                         xAxes: [{
                             type: 'time',
+                            gridLines: {
+                                display: true
+                            },
                             time: {
                                 displayFormats: {
                                     hour: 'DD일 HH시'
