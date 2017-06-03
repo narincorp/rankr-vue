@@ -28,12 +28,17 @@
         $(".now-content").click();
 
         $('.top-content').particleground({
-            dotColor: '#e0e0e0',
-            lineColor: '#e0e0e0'
+            dotColor: '#CFD8DC',
+            lineColor: '#CFD8DC'
         });
 
         Typed.new(".typing-text", {
-            strings: ["Realtime Search Keyword", "What is happening <strong>now</strong>", "Portal Sites Ranking"],
+            strings: [
+                "Realtime Search Keyword",
+                "What is happening <strong>now</strong>",
+                "실시간 급상승 검색어",
+                "현재 일어나고 있는 모든 일"
+            ],
             contentType: 'html',
             typeSpeed: 70,
             loop: true,

@@ -24,13 +24,16 @@ export default class SectionIntro extends Vue {
         scales: {
             xAxes: [{
                 gridLines: {
-                    offsetGridLines: true
+                    display: true
                 },
                 ticks : {
                     autoSkip: false,
                 }
             }],
             yAxes: [{
+                gridLines: {
+                    display: true
+                },
                 ticks: {
                     reverse: true,
                     beginAtZero: true,
