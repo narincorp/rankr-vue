@@ -11,7 +11,7 @@
                 </div>
                 <div class="column chart-column">
                     <div class="chart-wrapper">
-                        <intro-chart :chartData="chartRenderData" :options="chartRenderOptions"
+                        <intro-chart :chartData="chartRenderData"
                                      v-if="isInitialDataLoaded"></intro-chart>
                     </div>
                 </div>

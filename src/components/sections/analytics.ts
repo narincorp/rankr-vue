@@ -10,7 +10,6 @@ export default class SectionAnalytics extends Vue {
     isInitialDataLoaded = false;
 
     chartData: any = {};
-    chartOptions: any = {};
 
     datasets: Array<any> = [];
 
@@ -65,41 +64,6 @@ export default class SectionAnalytics extends Vue {
                         duration: 0
                     },
                     datasets: this.datasets
-                };
-
-                this.chartOptions =  {
-                    legend: {
-                        display: false
-                    },
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    title: {
-                        display: true,
-                        text: '최근 24시간 전체 키워드 분석'
-                    },
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                reverse: true,
-                                beginAtZero: true
-                            },
-                            gridLines: {
-                                display: true
-                            },
-                        }],
-                        xAxes: [{
-                            type: 'time',
-                            gridLines: {
-                                display: true
-                            },
-                            time: {
-                                displayFormats: {
-                                    hour: 'DD일 HH시'
-                                }
-                            }
-                        }]
-                    }
-
                 };
 
                 this.isInitialDataLoaded = true;
