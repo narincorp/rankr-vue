@@ -1,9 +1,9 @@
 <template>
     <nav class="ui top fixed menu">
         <div class="ui container">
-            <div class="brand item">
+            <a class="brand item" href="/">
                 <img class="nav-logo" src="images/nav-logo.svg">
-            </div>
+            </a>
             <div class="item">
                 <div class="ui icon input">
                     <input type="text" placeholder="검색어를 입력해주세요." v-model="searchKeyword">
@@ -11,8 +11,9 @@
                 </div>
             </div>
             <div class="right item">
-                <a class="item">API Document</a>
-                <a class="item"><i class="github icon"></i>Github Repository</a>
+                <a class="item">뉴럴네트워크</a>
+                <a class="item">API 문서</a>
+                <a class="item"><i class="github icon"></i>Github 리포지토리</a>
             </div>
         </div>
     </nav>

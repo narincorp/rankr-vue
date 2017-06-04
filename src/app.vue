@@ -1,7 +1,7 @@
 <template lang='pug'>
     div#app
         layout-header()
-        index()
+        router-view()
         layout-footer()
 </template>
 

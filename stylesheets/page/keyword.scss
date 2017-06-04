@@ -1,0 +1,24 @@
+#keyword-app {
+  .keyword-section {
+    &.intro {
+      border-bottom: 1px solid #e0e0e0;
+      .thumb {
+        background-image: url(http://t1.daumcdn.net/thumb/R2000x0/?fname=http://cfile27.uf.tistory.com/original/2560134F52B86CDF21EF3A);
+        width: 100%;
+        height: 50vh;
+        opacity: 0.1;
+        background-size: cover;
+        background-position: top;
+        position: absolute;
+      }
+      .content {
+        position: absolute;
+        width: 100%;
+        padding: 58px 10px 10px;
+        font-weight: bold;
+        
+      }
+      height: 50vh;
+    }
+  }
+}

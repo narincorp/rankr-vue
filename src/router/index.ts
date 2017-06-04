@@ -5,17 +5,18 @@ import * as Keyword from "../pages/keyword.vue";
 
 Vue.use(VueRouter);
 
+const routes = [
+    {
+        path: '/',
+        component: App,
+    },{
+        path: '/keyword/:search',
+        component: Keyword
+    }
+];
+
 const router = new VueRouter({
-    routes: [
-        {
-            path: '/',
-            component: App
-        },
-        {
-            path: '/keyword',
-            component: Keyword
-        }
-    ]
+    routes : routes
 });
 
 export default router;
