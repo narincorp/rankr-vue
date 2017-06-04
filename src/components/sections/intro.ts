@@ -23,6 +23,7 @@ export default class SectionIntro extends Vue {
         maintainAspectRatio: false,
         scales: {
             xAxes: [{
+                barPercentage: 1,
                 gridLines: {
                     display: true
                 },
@@ -46,14 +47,14 @@ export default class SectionIntro extends Vue {
         labels: [],
         datasets: [{
             type: 'bar',
-            label: "전체 순위",
+            label: "평균 순위",
             data: [],
             backgroundColor: '#E0F2F1',
             borderColor: '#B2DFDB',
             borderWidth: 2,
             reverse: true
         }, {
-            label: '전체 진입값',
+            label: '평균 진입값',
             data: [],
             backgroundColor: '#ECEFF1',
             borderColor: '#CFD8DC',
@@ -75,7 +76,7 @@ export default class SectionIntro extends Vue {
                 for (let data of recentResponse.data) {
                     this.chartLabels.push(data.title);
                     this.chartData.push(data.rank_avg);
-                    this.chartDataCount.push(data.count / 10);
+                    this.chartDataCount.push(data.rank_count / 500);
                 }
 
                 this.chartRenderData.labels = this.chartLabels;
