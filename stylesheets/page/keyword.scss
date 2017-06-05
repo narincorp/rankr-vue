@@ -2,10 +2,9 @@
   .keyword-section {
     &.intro {
       border-bottom: 1px solid #e0e0e0;
+      background-color: #fafafa;
       .thumb {
-        background-image: url(http://t1.daumcdn.net/thumb/R2000x0/?fname=http://cfile27.uf.tistory.com/original/2560134F52B86CDF21EF3A);
         width: 100%;
-        height: 50vh;
         opacity: 0.1;
         background-size: cover;
         background-position: top;
@@ -16,9 +15,55 @@
         width: 100%;
         padding: 58px 10px 10px;
         font-weight: bold;
-        
       }
       height: 50vh;
+    }
+    &.news{
+      .news-list{
+        list-style-type: none;
+        padding-left: 0;
+        li{
+          .thumb{
+            background-image: url("https://getuikit.com/v2/docs/images/placeholder_600x400.svg");
+            background-size: cover;
+            background-position: center;
+            width: 320px;
+            height: 180px;
+            border: 1px solid #e0e0e0;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
+          .content{
+            display: inline-block;
+            vertical-align: middle;
+            width : calc(100% - 333px);
+            .title{
+              font-family: "Helvetica Neue", sans-serif !important;
+              font-size: 18px;
+              font-weight: normal;
+              color: #4b4b4b;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              margin-bottom: 10px;
+            }
+            .description{
+              color: #9E9E9E;
+              letter-spacing: 1px;
+            }
+            .extra-content{
+              color: #9E9E9E;
+              font-family: "Helvetica Neue", sans-serif !important;
+              font-size: 12px;
+              font-weight: 100;
+              .item{
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
