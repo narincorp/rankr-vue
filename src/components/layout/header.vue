@@ -4,9 +4,9 @@
             <a class="brand item" href="/">
                 <img class="nav-logo" src="images/nav-logo.svg">
             </a>
-            <div class="item">
+            <div class="item search">
                 <div class="ui icon input">
-                    <input type="text" placeholder="검색어를 입력해주세요." v-model="searchKeyword">
+                    <input type="text" placeholder="검색어를 입력해주세요." v-model="searchKeyword" v-on:keyup.enter="$router.push({ name: 'keyword', params: { search: searchKeyword }})">
                     <i class="search icon"></i>
                 </div>
             </div>
