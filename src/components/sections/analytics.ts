@@ -16,7 +16,7 @@ export default class SectionAnalytics extends Vue {
     async created() {
 
         let recentResponse = await
-            axios.get("http://localhost:3000/analytics/today");
+            axios.get("http://api.rankr.narin.us/analytics/today");
 
         switch (recentResponse.status) {
             case 200:

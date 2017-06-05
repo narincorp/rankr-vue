@@ -23,7 +23,7 @@ export default class SectionRank extends Vue {
     @vts.watch('rankResult')
     async updateRankData() {
         this.isDataLoaded = false;
-        let rankResponse = await axios.get(`http://localhost:3000/rank/all`);
+        let rankResponse = await axios.get(`http://api.rankr.narin.us/rank/all`);
         switch (rankResponse.status) {
             case 200:
 

@@ -38,7 +38,7 @@ export default class Keyword extends Vue {
 
     async created() {
         let recentResponse = await
-            axios.get(`http://localhost:3000/analytics/keyword/${this.$route.params.search}`);
+            axios.get(`http://api.rankr.narin.us/analytics/keyword/${this.$route.params.search}`);
 
         switch (recentResponse.status) {
             case 200:
@@ -62,7 +62,7 @@ export default class Keyword extends Vue {
                 break;
         }
 
-        let responseNews = await axios.get(`http://localhost:3000/news/${this.$route.params.search}`);
+        let responseNews = await axios.get(`http://api.rankr.narin.us/news/${this.$route.params.search}`);
         switch (responseNews.status) {
             case 200:
 

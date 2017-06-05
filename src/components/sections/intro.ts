@@ -39,7 +39,7 @@ export default class SectionIntro extends Vue {
     async created() {
 
         let recentResponse = await
-            axios.get("http://localhost:3000/analytics/recent");
+            axios.get("http://api.rankr.narin.us/analytics/recent");
 
         switch (recentResponse.status) {
             case 200:
