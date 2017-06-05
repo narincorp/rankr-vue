@@ -18,21 +18,21 @@ export default class Keyword extends Vue {
             backgroundColor: '#E8F5E9',
             borderColor: '#C8E6C9',
             borderWidth: 2,
-            fill: 'origin'
+            fill: 'start'
         }, {
             label: '다음',
             data: [],
             backgroundColor: '#E3F2FD',
             borderColor: '#BBDEFB',
             borderWidth: 2,
-            fill: 'origin'
+            fill: 'start'
         }, {
             label: '줌',
             data: [],
             backgroundColor: '#E0F7FA',
             borderColor: '#B2EBF2',
             borderWidth: 2,
-            fill: 'origin'
+            fill: 'start'
         }]
     };
 

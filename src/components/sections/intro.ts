@@ -23,7 +23,7 @@ export default class SectionIntro extends Vue {
             backgroundColor: '#E0F2F1',
             borderColor: '#B2DFDB',
             borderWidth: 2,
-            reverse: true
+            reverse: true,
         }, {
             label: '평균 진입값',
             data: [],
@@ -31,7 +31,8 @@ export default class SectionIntro extends Vue {
             borderColor: '#CFD8DC',
             borderWidth: 2,
             // Changes this dataset to become a line
-            type: 'line'
+            type: 'line',
+            fill: 'start'
         }]
     };
 
