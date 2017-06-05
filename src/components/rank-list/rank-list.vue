@@ -5,7 +5,7 @@
             <li v-for="rank in rankData">
                 <article class="rank-item">
                     <span class="rank"><a class="ui red circular label">{{rank.rank}}</a></span>
-                    <a class="title"><span>{{rank.title}}</span></a>
+                    <router-link class="title" :to="{name : 'keyword', params : {search : rank.title}}"><span>{{rank.title}}</span></router-link>
                     <span class="status" v-if="rank.status"><i class="angle up icon"
                                                                v-if="rank.status == 'up'"></i>{{rank.status == 'new' ? 'NEW' : rank.value}}</span>
                 </article>
