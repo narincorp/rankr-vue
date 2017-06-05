@@ -8,29 +8,31 @@ export default class Keyword extends Vue {
 
     isInitialDataLoaded = false;
     chartData = {};
+    newsData = [];
 
     chartRenderData: any = {
+        type: 'line',
         datasets: [{
             label: "네이버",
             data: [],
             backgroundColor: '#E8F5E9',
             borderColor: '#C8E6C9',
             borderWidth: 2,
-            type: 'line'
+            fill: 'origin'
         }, {
             label: '다음',
             data: [],
             backgroundColor: '#E3F2FD',
             borderColor: '#BBDEFB',
             borderWidth: 2,
-            type: 'line'
+            fill: 'origin'
         }, {
             label: '줌',
             data: [],
             backgroundColor: '#E0F7FA',
             borderColor: '#B2EBF2',
             borderWidth: 2,
-            type: 'line'
+            fill: 'origin'
         }]
     };
 
@@ -56,9 +58,19 @@ export default class Keyword extends Vue {
                 this.chartRenderData.datasets[1].data = this.chartData['daum'];
                 this.chartRenderData.datasets[2].data = this.chartData['zum'];
 
+
+                break;
+        }
+
+        let responseNews = await axios.get(`http://localhost:3000/news/${this.$route.params.search}`);
+        switch (responseNews.status) {
+            case 200:
+
+                this.newsData = responseNews.data;
                 this.isInitialDataLoaded = true;
 
                 break;
         }
+
     }
 }

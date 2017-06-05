@@ -11,15 +11,16 @@ export default Line.extend({
             },
             responsive: true,
             maintainAspectRatio: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: true
-                        },
-                    }],
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        reverse: true
+                    },
+                    gridLines: {
+                        display: true
+                    },
+                }],
                 xAxes: [{
                     type: 'time',
                     gridLines: {

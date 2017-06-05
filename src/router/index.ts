@@ -9,14 +9,15 @@ const routes = [
     {
         path: '/',
         component: App,
-    },{
+    }, {
+        name: 'keyword',
         path: '/keyword/:search',
         component: Keyword
     }
 ];
 
 const router = new VueRouter({
-    routes : routes
+    routes: routes
 });
 
 export default router;
