@@ -11,9 +11,9 @@
                 </div>
             </div>
             <div class="right item">
-                <a class="item">뉴럴네트워크</a>
-                <a class="item">API 문서</a>
-                <a class="item"><i class="github icon"></i>Github 리포지토리</a>
+                <a class="item disabled">인공신경망</a>
+                <a class="item" href="https://github.com/endlessdev/rankr/wiki/RANKR-API-Document">API 문서</a>
+                <a class="item" href="https://github.com/endlessdev/rankr"><i class="github icon"></i>Github 저장소</a>
             </div>
         </div>
     </nav>

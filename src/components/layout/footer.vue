@@ -6,21 +6,21 @@
                     <div class="three wide column">
                         <h4 class="ui  header">오픈소스</h4>
                         <div class="ui  link list">
-                            <a class="item">프로젝트 기여</a>
-                            <a class="item">이슈트래커</a>
-                            <a class="item">라이센스</a>
-                            <a class="item">라이센스</a>
-                            <a class="item">글로벌화</a>
+                            <a class="item" href="https://github.com/endlessdev/rankr">프로젝트 기여</a>
+                            <a class="item" href="https://github.com/endlessdev/rankr/issues">이슈트래커</a>
+                            <a class="item disabled">라이센스</a>
+                            <a class="item" href="https://github.com/endlessdev/rankr/wiki">WIKI</a>
+                            <a class="item disabled">글로벌화</a>
                         </div>
                     </div>
                     <div class="three wide column">
                         <h4 class="ui  header">연구활동</h4>
                         <div class="ui link list">
-                            <a href="#" class="item">데이터 마이닝</a>
-                            <a href="#" class="item">뉴럴 네트워크</a>
-                            <a href="#" class="item">뉴럴 네트워크</a>
-                            <a href="#" class="item">활용 사례</a>
-                            <a href="#" class="item">기대 효과</a>
+                            <a href="#" class="item disabled">데이터 마이닝</a>
+                            <a href="#" class="item disabled">뉴럴 네트워크</a>
+                            <a href="#" class="item disabled">빅 데이터</a>
+                            <a href="#" class="item disabled">활용 사례</a>
+                            <a href="#" class="item disabled">기대 효과</a>
                         </div>
                     </div>
                     <div class="eight wide right floated column">
