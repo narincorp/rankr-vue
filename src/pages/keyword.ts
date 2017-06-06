@@ -7,6 +7,7 @@ import axios from 'axios';
 export default class Keyword extends Vue {
 
     isInitialDataLoaded = false;
+    thumbURL: string = "";
     chartData = {};
     newsData = [];
 
@@ -15,22 +16,22 @@ export default class Keyword extends Vue {
         datasets: [{
             label: "네이버",
             data: [],
-            backgroundColor: '#E8F5E9',
-            borderColor: '#C8E6C9',
+            backgroundColor: 'rgba(0,199,60,0.1)',
+            borderColor: '#00c73c',
             borderWidth: 2,
             fill: 'start'
         }, {
             label: '다음',
             data: [],
-            backgroundColor: '#E3F2FD',
-            borderColor: '#BBDEFB',
+            backgroundColor: 'rgba(0,137,255,0.1)',
+            borderColor: '#0089ff',
             borderWidth: 2,
             fill: 'start'
         }, {
             label: '줌',
             data: [],
-            backgroundColor: '#E0F7FA',
-            borderColor: '#B2EBF2',
+            backgroundColor: 'rgba(34,88,240,0.1)',
+            borderColor: '#2258f0',
             borderWidth: 2,
             fill: 'start'
         }]
@@ -63,14 +64,17 @@ export default class Keyword extends Vue {
         }
 
         let responseNews = await axios.get(`http://api.rankr.narin.us/news/${this.$route.params.search}`);
+
         switch (responseNews.status) {
             case 200:
 
                 this.newsData = responseNews.data;
+
                 this.isInitialDataLoaded = true;
 
                 break;
         }
 
     }
+
 }

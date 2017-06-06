@@ -1,10 +1,18 @@
 <template>
     <div id="keyword-app">
         <section class="intro keyword-section">
-            <div class="thumb"></div>
+            <div class="thumb"
+                 v-bind:style="{backgroundImage : newsData[0].thumb !=undefined ? 'url('+newsData[0].thumb+')' : ''}">
+                <div class="thumb-content">
+                    <div class="thumb-content-wrapper">
+                        <div class="ui container">
+                            <h1 class="keyword">{{$route.params.search}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="content">
                 <div class="content-wrapper ui container">
-                    <!--<p align="center"><b>{{$route.params.search}}</b>(으)로 검색한 결과입니다.</p>-->
                     <div class="chart-wrapper">
                         <keyword-chart :data="chartRenderData"
                                        v-if="isInitialDataLoaded"></keyword-chart>
@@ -17,7 +25,8 @@
                 <ul class="news-list">
                     <li v-for="news in newsData">
                         <article>
-                            <div class="thumb" v-bind:style="{backgroundImage : news.thumb !=undefined ? 'url('+news.thumb+')' : ''}"></div>
+                            <div class="thumb"
+                                 v-bind:style="{backgroundImage : news.thumb !=undefined ? 'url('+news.thumb+')' : ''}"></div>
                             <div class="content">
                                 <a v-bind:href="news.link"><h4 class="title">{{news.title}}</h4></a>
                                 <p class="description">{{news.description}}</p>
