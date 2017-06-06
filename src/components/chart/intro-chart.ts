@@ -12,6 +12,11 @@ export default Bar.extend({
             },
             responsive: true,
             maintainAspectRatio: false,
+            tooltips: {
+                position: 'average',
+                mode: 'index',
+                intersect: false,
+            },
             scales: {
                 xAxes: [{
                     barPercentage: 1,

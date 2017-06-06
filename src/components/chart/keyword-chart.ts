@@ -11,6 +11,11 @@ export default Line.extend({
             },
             responsive: true,
             maintainAspectRatio: false,
+            tooltips: {
+                position: 'average',
+                mode: 'index',
+                intersect: false,
+            },
             scales: {
                 yAxes: [{
                     ticks: {
