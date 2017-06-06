@@ -6,5 +6,5 @@
 </template>
 
 <script>
-    module.exports = require('./index.ts').default.vueComponentOptions
+    module.exports = require('/src/pages/index.ts').default.vueComponentOptions;
 </script>

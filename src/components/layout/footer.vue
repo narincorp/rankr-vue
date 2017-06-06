@@ -51,5 +51,5 @@
 </template>
 
 <script>
-    module.exports = require('./footer.ts').default.vueComponentOptions
+    module.exports = require('/src/components/layout/footer.ts').default.vueComponentOptions
 </script>

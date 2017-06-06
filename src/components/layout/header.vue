@@ -21,7 +21,7 @@
 
 
 <script>
-    module.exports = require('./header.ts').default.vueComponentOptions;
+    module.exports = require('/src/components/layout/header.ts').default.vueComponentOptions
 
 
     Typed.new(".typing-text", {
