@@ -32,7 +32,6 @@ export default class SectionIntro extends Vue {
             borderWidth: 2,
             // Changes this dataset to become a line
             type: 'line',
-            fill: 'start'
         }]
     };
 
