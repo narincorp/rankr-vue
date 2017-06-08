@@ -11,8 +11,10 @@
                 </div>
                 <div class="column chart-column">
                     <div class="chart-wrapper">
+                        <div class="ui loader text active" v-if="!isInitialDataLoaded">차트 데이터를 불러오는 중입니다.</div>
                         <intro-chart :chartData="chartRenderData"
-                                     v-if="isInitialDataLoaded"></intro-chart>
+                                     v-if="isInitialDataLoaded">
+                        </intro-chart>
                     </div>
                 </div>
             </div>
