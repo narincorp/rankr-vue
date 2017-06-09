@@ -128,12 +128,11 @@ h1, h2, h3, p, a {
   border-top: 1px solid #e0e0e0;
   background-color: #FAFAFA;
   padding: 10px 0;
-  //height:100vh;
-  //display: table;
-  //width: 100%;
   .chart-content-wrapper{
+    min-height: 400px;
     //display: table-cell;
     //width: 100%;
+    position: relative;
     #chart{
       //margin : auto;
     }
