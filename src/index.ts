@@ -1,8 +1,8 @@
-import vue = require('vue');
-import appVue = require('./app.vue');
-import index from './router/index';
+import * as Vue from 'vue';
+import * as App from './app.vue';
+import router from './router/router';
 
-new vue({
-  index,
-  render: (h) => { h(appVue); },
+new Vue({
+  router,
+  render: h => h(App),
 }).$mount('#app');
