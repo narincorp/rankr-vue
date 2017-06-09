@@ -4,9 +4,9 @@ import {Rank} from "./rank";
  * Created by jade on 29/04/2017.
  */
 
-export interface RankResult{
-    resultCode : number;
-    rankType : RankType;
-    requestDate : Date;
-    data : Rank[];
+export interface RankResult {
+  resultCode: number;
+  rankType: RankType;
+  requestDate: Date;
+  data: Rank[];
 }

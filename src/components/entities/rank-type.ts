@@ -1,1 +1,1 @@
-export type RankType = "naver" | "nate" | "daum" | "zum";
+export type RankType = 'naver' | 'nate' | 'daum' | 'zum' ;
