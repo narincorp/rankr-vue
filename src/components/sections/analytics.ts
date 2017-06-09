@@ -1,7 +1,7 @@
 import Vue = require('vue')
 import * as vts from 'vue-typescript-component'
 import AnalyticsChart from '../chart/analytics-chart'
-import axios from 'axios'
+import http from '../../../handler/http-client'
 
 @vts.component({components: {AnalyticsChart}})
 export default class SectionAnalytics extends Vue {
@@ -16,7 +16,7 @@ export default class SectionAnalytics extends Vue {
     async created() {
 
         let recentResponse = await
-            axios.get("http://api.rankr.narin.us/analytics/today");
+            http.get("/analytics/today");
 
         switch (recentResponse.status) {
             case 200:

@@ -1,5 +1,8 @@
 <template>
     <div id="keyword-app">
+        <!--<div class="ui active inverted dimmer">-->
+            <!--<div class="ui text loader">데이터를 불러오고 있습니다...</div>-->
+        <!--</div>-->
         <section class="intro keyword-section">
             <div class="thumb"
                  v-bind:style="{backgroundImage : newsData[0].thumb !=undefined ? 'url('+newsData[0].thumb+')' : ''}">
@@ -28,7 +31,7 @@
                             <div class="thumb"
                                  v-bind:style="{backgroundImage : news.thumb !=undefined ? 'url('+news.thumb+')' : ''}"></div>
                             <div class="content">
-                                <a v-bind:href="news.link"><h4 class="title">{{news.title}}</h4></a>
+                                <a v-bind:href="news.link" target="_blank"><h4 class="title">{{news.title}}</h4></a>
                                 <p class="description">{{news.description}}</p>
                                 <p class="extra-content">
                                     <span class="author item"><i class="write icon"></i>{{news.author}}</span>

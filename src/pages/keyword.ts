@@ -1,7 +1,7 @@
 import Vue = require('vue')
 import * as vts from 'vue-typescript-component'
 import KeywordChart from '../components/chart/keyword-chart';
-import axios from 'axios';
+import http from '../../handler/http-client';
 
 @vts.component({components: {KeywordChart}})
 export default class Keyword extends Vue {
@@ -39,7 +39,7 @@ export default class Keyword extends Vue {
 
     async created() {
         let recentResponse = await
-            axios.get(`http://api.rankr.narin.us/analytics/keyword/${this.$route.params.search}`);
+            http.get(`/analytics/keyword/${this.$route.params.search}`);
 
         switch (recentResponse.status) {
             case 200:
@@ -59,11 +59,10 @@ export default class Keyword extends Vue {
                 this.chartRenderData.datasets[1].data = this.chartData['daum'];
                 this.chartRenderData.datasets[2].data = this.chartData['zum'];
 
-
                 break;
         }
 
-        let responseNews = await axios.get(`http://api.rankr.narin.us/news/${this.$route.params.search}`);
+        let responseNews = await http.get(`/news/${this.$route.params.search}`);
 
         switch (responseNews.status) {
             case 200:

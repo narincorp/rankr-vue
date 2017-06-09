@@ -1,6 +1,6 @@
 import * as vts from 'vue-typescript-component'
 import Vue = require("vue");
-import axios from 'axios';
+import http from '../../../handler/http-client';
 import *  as RankList from "../rank-list/rank-list.vue";
 import {RankResult} from "../entities/rank-result";
 
@@ -23,7 +23,7 @@ export default class SectionRank extends Vue {
     @vts.watch('rankResult')
     async updateRankData() {
         this.isDataLoaded = false;
-        let rankResponse = await axios.get(`http://api.rankr.narin.us/rank/all`);
+        let rankResponse = await http.get(`/rank/all`);
         switch (rankResponse.status) {
             case 200:
 

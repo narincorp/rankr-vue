@@ -1,6 +1,6 @@
 import Vue = require('vue')
 import * as vts from 'vue-typescript-component'
-import axios from 'axios'
+import http from '../../../handler/http-client';
 import IntroChart from '../chart/intro-chart'
 
 @vts.component({components: {IntroChart}})
@@ -39,7 +39,7 @@ export default class SectionIntro extends Vue {
     async created() {
 
         let recentResponse = await
-            axios.get("http://api.rankr.narin.us/analytics/recent");
+            http.get("/analytics/recent");
 
         switch (recentResponse.status) {
             case 200:
