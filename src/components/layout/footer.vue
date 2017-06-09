@@ -8,13 +8,13 @@
                         <div class="ui  link list">
                             <a class="item" href="https://github.com/endlessdev/rankr">프로젝트 기여</a>
                             <a class="item" href="https://github.com/endlessdev/rankr/issues">이슈트래커</a>
-                            <a class="item disabled">라이센스</a>
+                            <a class="item" href="https://github.com/endlessdev/rankr/blob/master/LICENSE">라이센스</a>
                             <a class="item" href="https://github.com/endlessdev/rankr/wiki">WIKI</a>
-                            <a class="item disabled">글로벌화</a>
+                            <a class="item" href="https://github.com/endlessdev/rankr/wiki/Globalization">글로벌화</a>
                         </div>
                     </div>
                     <div class="three wide column">
-                        <h4 class="ui  header">연구활동</h4>
+                        <h4 class="ui header">연구활동</h4>
                         <div class="ui link list">
                             <a href="#" class="item disabled">데이터 마이닝</a>
                             <a href="#" class="item disabled">뉴럴 네트워크</a>
@@ -41,7 +41,7 @@
                 <div class="ui inverted section divider"></div>
                 <img src="images/nav-logo.svg" class="ui centered small image">
                 <div class="ui horizontal small link list">
-                    <a class="item" href="http://semantic-ui.mit-license.org/" target="_blank">Free &amp; Open Source
+                    <a class="item" href="https://github.com/endlessdev/rankr/blob/master/LICENSE" target="_blank">Free &amp; Open Source
                         (MIT)</a><br>
                     <span class="item">Copyright © 2017 Narin Inc. All rights reserved.</span>
                 </div>
@@ -51,5 +51,5 @@
 </template>
 
 <script>
-    module.exports = require('/src/components/layout/footer.ts').default.vueComponentOptions
+    module.exports = require('./footer.ts').default.vueComponentOptions
 </script>
