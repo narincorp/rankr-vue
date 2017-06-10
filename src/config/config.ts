@@ -16,7 +16,7 @@ export default  {
     API_BASE_URI: '/v1',
   },
   development: {
-    API_SERVER: 'http://localhost:3000',
+    API_SERVER: 'http://api.rankr.narin.us',
     API_BASE_URI: '/v1',
   },
 }[ENVIRONMENT];
