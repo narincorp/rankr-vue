@@ -1,2 +1,2 @@
 # rankr-vue
-Visualization website for rankr project 
+Visualization website for rankr project
