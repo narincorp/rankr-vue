@@ -1,6 +1,6 @@
 import * as vts from 'vue-typescript-component';
 import vue = require('vue');
-import httpClient from '../../../handler/http-client';
+import httpClient from '../../handler/http-client';
 import *  as RankList from '../rank-list/rank-list.vue';
 import { RankResult } from '../entities/rank-result';
 

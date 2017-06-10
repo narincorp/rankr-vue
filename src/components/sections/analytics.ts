@@ -1,9 +1,9 @@
 import vue = require('vue');
 import * as vts from 'vue-typescript-component';
-import AnalyticsChart from '../chart/analytics-chart';
-import http from '../../../handler/http-client';
+import analyticsChart from '../chart/analytics-chart';
+import httpClient from '../../handler/http-client';
 
-@vts.component({components: {AnalyticsChart}})
+@vts.component({ components: { analyticsChart } })
 export default class SectionAnalytics extends vue {
 
   name = 'section-analytics';
@@ -16,7 +16,7 @@ export default class SectionAnalytics extends vue {
   async created() {
 
     const recentResponse = await
-      http.get('/analytics/today');
+      httpClient.get('/analytics/today');
 
     switch (recentResponse.status) {
       case 200:

@@ -1,5 +1,5 @@
-import {RankType} from "./rank-type";
-import {Rank} from "./rank";
+import { RankType } from './rank-type';
+import { Rank } from './rank';
 /**
  * Created by jade on 29/04/2017.
  */

@@ -1,9 +1,9 @@
 import vue = require('vue');
 import * as vts from 'vue-typescript-component';
 import keywordChart from '../components/chart/keyword-chart';
-import httpClient from '../../handler/http-client';
+import httpClient from '../handler/http-client';
 
-@vts.component({components: {keywordChart}})
+@vts.component({ components: { keywordChart } })
 export default class Keyword extends vue {
 
   isInitialDataLoaded = false;

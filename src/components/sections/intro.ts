@@ -1,6 +1,6 @@
 import vue = require('vue');
 import * as vts from 'vue-typescript-component';
-import httpClient from '../../../handler/http-client';
+import httpClient from '../../handler/http-client';
 import introChart from '../chart/intro-chart';
 
 @vts.component({ components: { introChart } })
