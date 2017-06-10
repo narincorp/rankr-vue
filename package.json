@@ -75,9 +75,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "babelify": "^7.3.0",
-    "chart.js": "^2.6.0",
     "dotenv": "^4.0.0",
-    "jquery": "^3.2.1",
     "rss-parser": "^2.9.0",
     "tslint-config-airbnb": "^5.1.2",
     "vue-chartjs": "^2.6.3",
