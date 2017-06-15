@@ -7,7 +7,7 @@
     "watchify": "mkdirp debug && watchify -vd -p tsify -p browserify-hmr -e src/index.ts -o debug/index.js",
     "serve": "http-server -c 1 -a localhost -o",
     "start": "npm-run-all --parallel watchify serve",
-    "mkdist": "mkdirp dist && rplcr index.html -f debug/ -o index.html && atomify --envlocalify browserify -g envify -p tsify -p [ vueify/plugins/extract-css -o dist/index.css ] -e src/index.ts | uglifyjs -c warnings=false -m > dist/index.js",
+    "mkdist": "mkdirp dist && rplcr index.html -f debug/ -o index.html && browserify -g envify -p tsify -p [ vueify/plugins/extract-css -o dist/index.css ] -e src/index.ts | uglifyjs -c warnings=false -m > dist/index.js",
     "dist": "npm-run-all --silent lint 'test -- --no-cache' mkdist",
     "test": "jest",
     "lint": "tslint src/**/*.ts test/**/*.ts"
