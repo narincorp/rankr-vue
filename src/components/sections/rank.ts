@@ -41,9 +41,9 @@ export default class SectionRank extends vue {
           clearInterval(this.intervalId);
         }
 
-        this.intervalId = setInterval(() => {
+        this.intervalId = window.setInterval(() => {
           this.dataLoadedSecond += 1;
-        },                            1000);
+        },                                   1000);
 
         this.rankResult = rankResponse.data;
         this.isInitialDataLoaded = true;
@@ -52,4 +52,5 @@ export default class SectionRank extends vue {
         break;
     }
   }
+
 }
