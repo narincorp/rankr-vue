@@ -10,7 +10,7 @@
 		"noImplicitAny": false,
 		"pretty": true,
 		"lib": ["es5", "dom", "es2015.promise"],
-		"types": ["vue-typescript-import-dts"],
+		"types": ["vue-typescript-import-dts", "node"],
 		"typeRoots": [ "../node_modules/@types" ]
 	},
 	"exclude": [
