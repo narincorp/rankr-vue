@@ -14,13 +14,8 @@ export default class SectionAnalytics extends vue {
   datasets: any[] = [];
 
   async created() {
-
-    const recentResponse = await
-      httpClient.get('/analytics/today');
-
-    switch (recentResponse.status) {
-      case 200:
-
+    httpClient.get('/analytics/today')
+      .then((recentResponse) => {
         for (const data of recentResponse.data) {
           const orgCount = data.count;
           if (data.count > 50) {
@@ -69,9 +64,9 @@ export default class SectionAnalytics extends vue {
         };
 
         this.isInitialDataLoaded = true;
-
-        break;
-    }
+      }).catch((err) => {
+        console.log(err);
+      });
   }
 
   private static getRandomHex(): number {

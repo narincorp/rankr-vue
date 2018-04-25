@@ -38,12 +38,8 @@ export default class SectionIntro extends vue {
 
   async created() {
 
-    const recentResponse = await
-      httpClient.get('/analytics/recent');
-
-    switch (recentResponse.status) {
-      case 200:
-
+    httpClient.get('/analytics/recent')
+      .then((recentResponse) => {
         for (const data of recentResponse.data) {
           this.chartLabels.push(data.title);
           this.chartData.push(data.rank_avg);
@@ -56,8 +52,9 @@ export default class SectionIntro extends vue {
         this.chartRenderData.datasets[1].data = this.chartDataCount;
 
         this.isInitialDataLoaded = true;
+      }).catch((err) => {
+        console.log(err);
+      });
 
-        break;
-    }
   }
 }

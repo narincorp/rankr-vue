@@ -38,12 +38,8 @@ export default class Keyword extends vue {
   };
 
   async created() {
-    const recentResponse = await
-      httpClient.get(`/analytics/keyword/${this.$route.params.search}`);
-
-    switch (recentResponse.status) {
-      case 200:
-
+    httpClient.get(`/analytics/keyword/${this.$route.params.search}`)
+      .then((recentResponse) => {
         for (const rankType in recentResponse.data) {
           if (recentResponse.data.hasOwnProperty(rankType)) {
             this.chartData[rankType] = [];
@@ -54,24 +50,17 @@ export default class Keyword extends vue {
               });
           }
         }
-
         this.chartRenderData.datasets[0].data = this.chartData['naver'];
         this.chartRenderData.datasets[1].data = this.chartData['daum'];
         this.chartRenderData.datasets[2].data = this.chartData['zum'];
 
-        break;
-    }
-
-    const responseNews = await httpClient.get(`/news/${this.$route.params.search}`);
-
-    switch (responseNews.status) {
-      case 200:
-
-        this.newsData = responseNews.data;
-
-        this.isInitialDataLoaded = true;
-
-        break;
-    }
+        httpClient.get(`/news/${this.$route.params.search}`)
+          .then((responseNews) => {
+            this.newsData = responseNews.data;
+            this.isInitialDataLoaded = true;
+          });
+      }).catch((err) => {
+        console.log(err);
+      });
   }
 }

@@ -17,19 +17,18 @@ export default class SectionRank extends vue {
 
 
   async created() {
-    await this.updateRankData();
+    this.updateRankData();
   }
 
   @vts.watch('rankResult')
-  async updateRankData() {
+  updateRankData() {
     this.isDataLoaded = false;
-    const rankResponse = await httpClient.get(`/rank/all`);
-    switch (rankResponse.status) {
-      case 200:
 
+    httpClient.get('/rank/all')
+      .then((rankResponse) => {
         for (const data in rankResponse.data) {
           if (rankResponse.data.hasOwnProperty(data)) {
-            rankResponse.data[data] = await rankResponse.data[data].filter((element, idx) => {
+            rankResponse.data[data] = rankResponse.data[data].filter((element, idx) => {
               return idx < 10;
             });
           }
@@ -49,8 +48,8 @@ export default class SectionRank extends vue {
         this.isInitialDataLoaded = true;
         this.isDataLoaded = true;
 
-        break;
-    }
+      }).catch((err) => {
+        console.log(err);
+      });
   }
-
 }
